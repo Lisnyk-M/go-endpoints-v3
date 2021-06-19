@@ -17,3 +17,5 @@ POST: /auth/register body: {user, email}
 GET /users   
 GET /user/:id   
 DELETE /user/:id   
+
+### Link to the static repositories: https://github.com/Lisnyk-M/go-endpoints-v3-static
