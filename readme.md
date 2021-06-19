@@ -5,7 +5,7 @@ This project allows to add and delete users. The project is written on a Golang 
 
 
 ### How to run:   
-1. Git clone or download project from this link: https://github.com/Lisnyk-M/go-endpoints-v2.git     
+1. Git clone or download project from this link: https://github.com/Lisnyk-M/go-endpoints-v3.git     
 2. Unpacked to any directory  
 3. Go to the go-endpoints-v2-master   
 4. To run this project entering: go run main.go   
