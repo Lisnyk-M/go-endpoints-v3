@@ -23,13 +23,6 @@ func main() {
 	api.Db_connection()
 	r := gin.Default()
 	r.Use(server.CORS())
-	// r.Static("/", "./public")
-
-	// http.HandleFunc("/", RootHandler)
-
-	// if err := http.ListenAndServe(":8080", nil); err != nil {
-	// 	log.Fatal(err)
-	// }
 
 	r.Use(static.Serve("/", static.LocalFile("./public", true)))
 	v1 := r.Group("/")
@@ -41,20 +34,5 @@ func main() {
 		v1.POST("/auth/register", controllers.Register)
 	}
 
-	// r.Use(static.Serve("/", static.LocalFile("./public", true)))
-	// r.GET("/users", controllers.GetUsers)
-	// r.GET("/user/:id", controllers.GetUserById)
-	// r.GET("/auth/get-email/:email", controllers.GetEmail)
-	// r.DELETE("/user/:id", controllers.DeleteUserById)
-	// r.POST("/auth/register", controllers.Register)
-
-	// http_func.Send()
-	// config := cors.DefaultConfig()
-	// config.AllowOrigins = []string{"http://google.com"}
-	// // config.AllowOrigins == []string{"http://google.com", "http://facebook.com"}
-
-	// router.Use(cors.New(config))
-
-	// r.Run(":443")
 	r.Run()
 }

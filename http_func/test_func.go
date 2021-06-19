@@ -20,14 +20,8 @@ func Send() {
 		fmt.Println(err)
 		return
 	}
+
 	defer resp.Body.Close()
-	// io.Copy(os.Stdout, resp.Body)
-	// body, err := io.ReadAll(resp.Body)
 	body, err := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
-	//
-	// var result map[string]interface{}
-	// json.NewDecoder(resp.Body).Decode(&result)
-	// log.Println(result)
-
 }
